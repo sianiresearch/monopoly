@@ -1,0 +1,11 @@
+
+body {margin:0;padding:0;}
+.layout { position:absolute; height: 98%; padding:0;}
+#panel { width: 200px; background-color: #eee; padding: 4px; font-family: "Arial", serif; }
+#panel h1 { font-size:18px; margin: 0;}
+#panel h2 { font-size:15px; margin: 0; }
+#panel .toolbar { margin-top: 12px; }
+#main { width: 510px;left: 210px;}
+#main #bg { position:absolute; top:0; left: 0px; height: 510px; }
+.region { position:absolute; z-index: 10; opacity: 0.85; }
+

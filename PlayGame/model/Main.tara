@@ -1,0 +1,68 @@
+dsl Monopoly 
+
+Simulation
+	from ="01/01/2015 00:00:00"
+	to = "02/01/2015 00:00:00"
+
+Dices
+
+Board board
+    Init s0; Terrain s1; Community s2; Terrain s3; Taxes s4; Station s5; Terrain s6; Luck s7; Terrain s8; Terrain s9
+    Jail s10; Terrain s11; Company s12; Terrain s13; Terrain s14; Station s15; Terrain s16; Community s17; Terrain s18; Terrain s19
+    FreeParking s20; Terrain s21; Luck s22; Terrain s23; Terrain s24; Station s25; Terrain s26; Terrain s27; Company s28; Terrain s29
+    GoToJail s30; Terrain s31; Terrain s32; Community s33; Terrain s34; Station s35; Luck s36; Terrain s37; Taxes s38; Terrain s39
+
+LuckyCards
+    Card; Card; Card(24); Card(0); Card; Card(39); Card; Card; Card
+    Card(11); Card(15); Card; Card(10); Card(-3); Card; Card
+
+CommunityCards
+    Card; Card; Card; Card; Card; Card; Card; Card; Card(0)
+    Card(1); Card; Card; Card; Card; Card(10); Card
+
+Player(id = "p1") p1 > as Mover
+Player("p2") > as Mover
+Player("p3") > as Mover
+Player("p4") > as Mover
+
+HeatMap("monopoly.png")
+    Region(0 0 0 0, board.s0, 'entity().as(Square.class).count()') r0
+    Region(0 0 0 0, board.s1, 'entity().as(Square.class).count()') r1
+    Region(0 0 0 0, board.s2, 'entity().as(Square.class).count()') r2
+    Region(0 0 0 0, board.s3, 'entity().as(Square.class).count()') r3
+    Region(0 0 0 0, board.s4, 'entity().as(Square.class).count()') r4
+    Region(0 0 0 0, board.s5, 'entity().as(Square.class).count()') r5
+    Region(0 0 0 0, board.s6, 'entity().as(Square.class).count()') r6
+    Region(0 0 0 0, board.s7, 'entity().as(Square.class).count()') r7
+    Region(0 0 0 0, board.s8, 'entity().as(Square.class).count()') r8
+    Region(0 0 0 0, board.s9, 'entity().as(Square.class).count()') r9
+    Region(0 0 0 0, board.s10, 'entity().as(Square.class).count()') r10
+    Region(0 0 0 0, board.s11, 'entity().as(Square.class).count()') r11
+    Region(0 0 0 0, board.s12, 'entity().as(Square.class).count()') r12
+    Region(0 0 0 0, board.s13, 'entity().as(Square.class).count()') r13
+    Region(0 0 0 0, board.s14, 'entity().as(Square.class).count()') r14
+    Region(0 0 0 0, board.s15, 'entity().as(Square.class).count()') r15
+    Region(0 0 0 0, board.s16, 'entity().as(Square.class).count()') r16
+    Region(0 0 0 0, board.s17, 'entity().as(Square.class).count()') r17
+    Region(0 0 0 0, board.s18, 'entity().as(Square.class).count()') r18
+    Region(0 0 0 0, board.s19, 'entity().as(Square.class).count()') r19
+    Region(0 0 0 0, board.s20, 'entity().as(Square.class).count()') r20
+    Region(0 0 0 0, board.s21, 'entity().as(Square.class).count()') r21
+    Region(0 0 0 0, board.s22, 'entity().as(Square.class).count()') r22
+    Region(0 0 0 0, board.s23, 'entity().as(Square.class).count()') r23
+    Region(0 0 0 0, board.s24, 'entity().as(Square.class).count()') r24
+    Region(0 0 0 0, board.s25, 'entity().as(Square.class).count()') r25
+    Region(0 0 0 0, board.s26, 'entity().as(Square.class).count()') r26
+    Region(0 0 0 0, board.s27, 'entity().as(Square.class).count()') r27
+    Region(0 0 0 0, board.s28, 'entity().as(Square.class).count()') r28
+    Region(0 0 0 0, board.s29, 'entity().as(Square.class).count()') r29
+    Region(0 0 0 0, board.s30, 'entity().as(Square.class).count()') r30
+    Region(0 0 0 0, board.s31, 'entity().as(Square.class).count()') r31
+    Region(0 0 0 0, board.s32, 'entity().as(Square.class).count()') r32
+    Region(0 0 0 0, board.s33, 'entity().as(Square.class).count()') r33
+    Region(0 0 0 0, board.s34, 'entity().as(Square.class).count()') r34
+    Region(0 0 0 0, board.s35, 'entity().as(Square.class).count()') r35
+    Region(0 0 0 0, board.s36, 'entity().as(Square.class).count()') r36
+    Region(0 0 0 0, board.s37, 'entity().as(Square.class).count()') r37
+    Region(0 0 0 0, board.s38, 'entity().as(Square.class).count()') r38
+    Region(0 0 0 0, board.s39, 'entity().as(Square.class).count()') r39
